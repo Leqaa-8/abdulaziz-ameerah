@@ -1,0 +1,83 @@
+/* ═══════════════════════════════════════════
+   ENVELOPE OPENING PAGE
+   The background image contains the full design.
+   CSS here only handles layout, click tap zone,
+   and the open/exit animations.
+═══════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #1C1408;
+}
+
+/* ── Full-screen envelope image ── */
+.envelope-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background-image: url('../assets/images/envelope-bg.png');
+  background-size: cover;
+  background-position: center;
+
+  /* Animate opacity + scale on open/exit */
+  transition:
+    opacity   1.1s ease,
+    transform 1.5s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Phase 1 — gentle zoom in on click */
+.envelope-page.is-opening {
+  transform: scale(1.07);
+}
+
+/* Phase 2 — continue zooming + fade out */
+.envelope-page.is-exiting {
+  opacity: 0;
+  transform: scale(1.13);
+}
+
+/* ── Invisible tap zone over the wax seal ── */
+.seal-tap {
+  position: absolute;
+  top:  52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width:  clamp(130px, 18vw, 180px);
+  height: clamp(130px, 18vw, 180px);
+  border-radius: 50%;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Focus ring for keyboard accessibility */
+.seal-tap:focus-visible {
+  outline: 2px solid rgba(196,162,101,.5);
+  outline-offset: 4px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .seal-tap {
+    top:  50%;
+    width:  clamp(120px, 38vw, 160px);
+    height: clamp(120px, 38vw, 160px);
+  }
+}
