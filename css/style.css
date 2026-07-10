@@ -24,13 +24,16 @@ body {
 /* ── Full-screen envelope image ── */
 .envelope-page {
   position: relative;
-  width: 100vw;
+  /* Portrait image (794×1981): constrain width so container matches image ratio */
+  width: min(100vw, calc(100vh * 794 / 1981));
   height: 100vh;
+  margin: 0 auto;
   overflow: hidden;
 
   background-image: url('../assets/images/envelope-bg.png');
-  background-size: cover;
+  background-size: contain;   /* container ratio = image ratio → no crop, no distortion */
   background-position: center;
+  background-repeat: no-repeat;
 
   /* Animate opacity + scale on open/exit */
   transition:
@@ -75,6 +78,12 @@ body {
 
 /* ── Mobile ── */
 @media (max-width: 480px) {
+  /* Full-width on mobile; cover crops only ~6.7% from top/bottom edges */
+  .envelope-page {
+    width: 100vw;
+    background-size: cover;
+  }
+
   .seal-tap {
     top:  50%;
     width:  clamp(120px, 38vw, 160px);
