@@ -41,16 +41,28 @@ body {
 }
 
 /* Prevent Safari from auto-linking dates, phone numbers, addresses */
-a[x-apple-data-detectors] {
+a[x-apple-data-detectors],
+a[x-apple-data-detectors]:hover,
+a[x-apple-data-detectors]:active,
+a[x-apple-data-detectors]:visited {
   color: inherit !important;
   text-decoration: none !important;
-  font-size: inherit !important;
-  font-weight: inherit !important;
-  pointer-events: none;
+  font: inherit !important;
+  background: transparent !important;
+  border: 0 !important;
+  cursor: default !important;
+  pointer-events: none !important;
 }
 
-/* Force no-link appearance on any auto-detected element */
+/* Lock date elements — gold color survives Safari data-detector wrapping */
 .s-date__nums,
+.s-date__nums a[x-apple-data-detectors] {
+  color: var(--gold) !important;
+  -webkit-text-fill-color: var(--gold) !important;
+  text-decoration: none !important;
+  -webkit-touch-callout: none;
+}
+
 .s-date__weekday,
 .s-date__bismi {
   -webkit-touch-callout: none;
