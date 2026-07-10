@@ -196,7 +196,7 @@ a[x-apple-data-detectors]:visited {
 ═══════════════════════════════════════════ */
 .c-bismillah {
   font-family: 'Aref Ruqaa', serif;
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: clamp(19px, 3.5vw, 24px);
   color: #FFF8F0;
   letter-spacing: 0;
   margin-bottom: 36px;
@@ -207,7 +207,7 @@ a[x-apple-data-detectors]:visited {
 
 .c-blessing {
   font-family: 'Aref Ruqaa', serif;
-  font-size: clamp(14px, 2.8vw, 17px);
+  font-size: clamp(16px, 3.3vw, 20px);
   font-weight: 300;
   color: #FFF8F0;
   line-height: 2.4;
@@ -265,7 +265,7 @@ a[x-apple-data-detectors]:visited {
 
 .c-invite {
   font-family: 'Aref Ruqaa', serif;
-  font-size: clamp(14px, 2.8vw, 17px);
+  font-size: clamp(16px, 3.3vw, 20px);
   font-weight: 300;
   color: #FFF8F0;
   line-height: 2.5;
@@ -341,7 +341,7 @@ a[x-apple-data-detectors]:visited {
 
 .scroll-hint__text {
   font-family: 'Aref Ruqaa', serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
   color: var(--text-soft);
   letter-spacing: .06em;
@@ -478,7 +478,7 @@ a[x-apple-data-detectors]:visited {
 
 .s-countdown__title {
   font-family: 'Aref Ruqaa', serif;
-  font-size: clamp(20px, 4.5vw, 30px);
+  font-size: clamp(24px, 5.3vw, 35px);
   color: var(--text-soft);
   letter-spacing: .06em;
   margin-bottom: 22px;
@@ -583,7 +583,7 @@ a[x-apple-data-detectors]:visited {
 /* Small eyebrow label */
 .s-venue__eyebrow {
   font-family: 'Aref Ruqaa', serif;
-  font-size: clamp(13px, 2.4vw, 15px);
+  font-size: clamp(15px, 2.8vw, 18px);
   font-weight: 300;
   color: #8E7B63;
   letter-spacing: .12em;
@@ -742,7 +742,7 @@ a[x-apple-data-detectors]:visited {
 
 .s-timeline__eyebrow {
   font-family: 'Aref Ruqaa', serif;
-  font-size: clamp(13px, 2.4vw, 15px);
+  font-size: clamp(15px, 2.8vw, 18px);
   font-weight: 300;
   color: var(--text-soft);
   letter-spacing: .12em;
@@ -920,7 +920,7 @@ a[x-apple-data-detectors]:visited {
 
   /* ── Mobile heading size boosts (+15-20%) ── */
   .c-bismillah {
-    font-size: clamp(19px, 4vw, 23px);
+    font-size: clamp(22px, 4.7vw, 27px);
   }
 
   .s-date__bismi {
@@ -932,12 +932,12 @@ a[x-apple-data-detectors]:visited {
   }
 
   .s-countdown__title {
-    font-size: clamp(23px, 5.2vw, 34px);
+    font-size: clamp(27px, 6.1vw, 40px);
   }
 
   .s-venue__eyebrow,
   .s-timeline__eyebrow {
-    font-size: clamp(15px, 3vw, 17px);
+    font-size: clamp(18px, 3.5vw, 20px);
   }
 
   .s-venue__name {
