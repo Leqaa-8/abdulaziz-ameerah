@@ -38,7 +38,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  text-shadow: 0 1px 2px rgba(0,0,0,.12);
+  text-shadow: 0 1px 2px rgba(0,0,0,.17);
 }
 
 /* Prevent Safari from auto-linking dates, phone numbers, addresses */
@@ -202,13 +202,13 @@ a[x-apple-data-detectors]:visited {
   letter-spacing: 0;
   margin-bottom: 36px;
   text-shadow:
-    0 2px 12px rgba(0,0,0,0.18),
-    0 0   20px rgba(255,248,240,0.25);
+    0 2px 12px rgba(0,0,0,.25),
+    0 0   20px rgba(255,248,240,.35);
 }
 
 .c-blessing {
   font-family: 'Aref Ruqaa', serif;
-  font-size: clamp(9px, 2.5vw, 15px);
+  font-size: clamp(14px, 3.8vw, 22px);
   font-weight: 300;
   color: #FFF8F0;
   line-height: 2.4;
@@ -216,8 +216,8 @@ a[x-apple-data-detectors]:visited {
   white-space: nowrap;
   margin-bottom: 8px;
   text-shadow:
-    0 2px 12px rgba(0,0,0,0.18),
-    0 0   20px rgba(255,248,240,0.25);
+    0 2px 12px rgba(0,0,0,.25),
+    0 0   20px rgba(255,248,240,.35);
 }
 
 .c-names {
@@ -247,8 +247,8 @@ a[x-apple-data-detectors]:visited {
   letter-spacing: 0;
   color: #FFF8F0;
   text-shadow:
-    0 2px 12px rgba(0,0,0,0.18),
-    0 0   20px rgba(255,248,240,0.25);
+    0 2px 12px rgba(0,0,0,.25),
+    0 0   20px rgba(255,248,240,.35);
 }
 
 .c-names__amp {
@@ -261,8 +261,8 @@ a[x-apple-data-detectors]:visited {
   letter-spacing: 0;
   color: #78947A;
   text-shadow:
-    0 2px 12px rgba(0,0,0,0.18),
-    0 0   20px rgba(255,248,240,0.25);
+    0 2px 12px rgba(0,0,0,.25),
+    0 0   20px rgba(255,248,240,.35);
 }
 
 .c-invite {
@@ -274,8 +274,8 @@ a[x-apple-data-detectors]:visited {
   letter-spacing: 0;
   margin-bottom: 8px;
   text-shadow:
-    0 2px 12px rgba(0,0,0,0.18),
-    0 0   20px rgba(255,248,240,0.25);
+    0 2px 12px rgba(0,0,0,.25),
+    0 0   20px rgba(255,248,240,.35);
 }
 
 .c-verse {
@@ -288,8 +288,8 @@ a[x-apple-data-detectors]:visited {
   margin-top: 6px;
   letter-spacing: 0;
   text-shadow:
-    0 2px 12px rgba(0,0,0,0.18),
-    0 0   20px rgba(255,248,240,0.25);
+    0 2px 12px rgba(0,0,0,.25),
+    0 0   20px rgba(255,248,240,.35);
 }
 
 /* ═══════════════════════════════════════════
@@ -317,7 +317,7 @@ a[x-apple-data-detectors]:visited {
   flex-shrink: 0;
   line-height: 1;
   letter-spacing: 0;
-  text-shadow: 0 1px 8px rgba(0,0,0,.15);
+  text-shadow: 0 1px 8px rgba(0,0,0,.21);
 }
 
 /* ═══════════════════════════════════════════
@@ -439,9 +439,9 @@ a[x-apple-data-detectors]:visited {
   letter-spacing: .06em;
   text-decoration: none !important;
   text-shadow:
-    0  2px 0   rgba(255,255,255,.9),
-    0  4px 18px rgba(201,161,91,.15),
-    0 -1px 0   rgba(140,102,40,.08);
+    0  2px 0   rgba(255,255,255,1),
+    0  4px 18px rgba(201,161,91,.21),
+    0 -1px 0   rgba(140,102,40,.11);
 }
 
 /* ═══════════════════════════════════════════
