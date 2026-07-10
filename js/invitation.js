@@ -1,17 +1,36 @@
 (function () {
   'use strict';
 
-  // ── Video autoplay — force play on mobile (Safari / Chrome iOS) ──
+  // ── Video autoplay — silent decorative background ──────────────
   var heroVideo = document.querySelector('.hero-video');
   if (heroVideo) {
-    var tryPlay = function () {
-      heroVideo.play().catch(function () {});
+    // Lock muted state in JS — required for iOS autoplay policy
+    heroVideo.muted        = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.volume       = 0;
+
+    var startVideo = function () {
+      heroVideo.muted  = true;
+      heroVideo.volume = 0;
+      var promise = heroVideo.play();
+      if (promise !== undefined) {
+        promise.catch(function () {});
+      }
     };
-    // Attempt immediately (works if autoplay policy allows it)
-    tryPlay();
-    // Re-attempt on first touch/click — covers Safari's strict autoplay gate
-    document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
-    document.addEventListener('click',      tryPlay, { once: true, passive: true });
+
+    // Try immediately on DOM ready
+    startVideo();
+
+    // Re-attempt on first touch — covers Safari strict autoplay gate
+    document.addEventListener('touchstart',       startVideo, { once: true, passive: true });
+    // Re-attempt on click — covers WhatsApp / Telegram in-app browsers
+    document.addEventListener('click',            startVideo, { once: true });
+    // Re-attempt after back-navigation (bfcache restore)
+    window.addEventListener('pageshow',           startVideo);
+    // Re-attempt when tab becomes visible again
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) startVideo();
+    });
   }
 
   // ── Countdown timer ──────────────────────────────────────────

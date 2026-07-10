@@ -130,6 +130,19 @@ a[x-apple-data-detectors] {
   object-position: center;
   z-index: 0;
   pointer-events: none;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black); /* force GPU compositing layer on iOS */
+}
+
+/* Strip all native browser media controls */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-panel,
+.hero-video::-webkit-media-controls-play-button,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+  opacity: 0 !important;
 }
 
 /* ─── Ivory + glow overlay (sits between video and content) ─── */
