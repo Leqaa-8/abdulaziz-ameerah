@@ -75,21 +75,9 @@ body {
 
 /* ── Mobile ── */
 @media (max-width: 480px) {
-  /* Landscape rectangle: shows full envelope with side margins */
-  .envelope-page {
-    position: fixed;
-    top: 50%;
-    left: 16px;
-    margin-top: -22.5vh;
-    width: calc(100vw - 32px);
-    height: 45vh;
-    background-size: cover;
-    background-position: center;
-  }
-
   .seal-tap {
     top:  50%;
-    width:  clamp(80px, 24vw, 120px);
-    height: clamp(80px, 24vw, 120px);
+    width:  clamp(120px, 38vw, 160px);
+    height: clamp(120px, 38vw, 160px);
   }
 }
