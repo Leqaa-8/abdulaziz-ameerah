@@ -76,6 +76,11 @@ a[x-apple-data-detectors] {
 .floral-corner--bl { bottom: 0; right: 0; transform: scaleY(-1); }
 .floral-corner--br { bottom: 0; left: 0;  transform: scale(-1,-1); }
 
+/* Low Power Mode / blocked autoplay: hide video, poster bg stays visible */
+.video-autoplay-blocked .hero-video {
+  display: none;
+}
+
 /* ═══════════════════════════════════════════
    SECTION 1 — HERO
 ═══════════════════════════════════════════ */
@@ -86,7 +91,11 @@ a[x-apple-data-detectors] {
   align-items: center;
   justify-content: center;
   padding: 80px 24px 110px;
-  background: #FAF7F2;
+  background-color: #FAF7F2;
+  background-image: url('../assets/images/hero-poster.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
   isolation: isolate;
 }

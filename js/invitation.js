@@ -1,31 +1,6 @@
 (function () {
   'use strict';
 
-  // ── Video autoplay — silent decorative background ──────────────
-  var heroVideo = document.querySelector('.hero-video');
-  if (heroVideo) {
-    // Enforce muted in JS — belt-and-suspenders for iOS autoplay policy
-    heroVideo.muted        = true;
-    heroVideo.defaultMuted = true;
-    heroVideo.volume       = 0;
-
-    var startVideo = function () {
-      heroVideo.muted  = true;
-      heroVideo.volume = 0;
-      var p = heroVideo.play();
-      if (p !== undefined) p.catch(function () {});
-    };
-
-    // Fire once metadata is ready — most reliable trigger point on iOS Safari
-    heroVideo.addEventListener('loadedmetadata', startVideo, { once: true });
-
-    // Resume after tab-switch or bfcache restore (back-navigation on mobile)
-    document.addEventListener('visibilitychange', function () {
-      if (!document.hidden) startVideo();
-    });
-    window.addEventListener('pageshow', startVideo);
-  }
-
   // ── Countdown timer ──────────────────────────────────────────
   var TARGET = new Date('2026-08-14T20:00:00');
 
