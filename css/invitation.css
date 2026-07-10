@@ -831,8 +831,6 @@ a[x-apple-data-detectors]:visited {
   font-weight: 400;
   color: var(--gold);
   letter-spacing: .06em;
-  direction: ltr;
-  unicode-bidi: isolate;
 }
 
 /* ═══════════════════════════════════════════
