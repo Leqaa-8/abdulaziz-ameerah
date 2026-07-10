@@ -1,6 +1,19 @@
 (function () {
   'use strict';
 
+  // ── Video autoplay — force play on mobile (Safari / Chrome iOS) ──
+  var heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    var tryPlay = function () {
+      heroVideo.play().catch(function () {});
+    };
+    // Attempt immediately (works if autoplay policy allows it)
+    tryPlay();
+    // Re-attempt on first touch/click — covers Safari's strict autoplay gate
+    document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+    document.addEventListener('click',      tryPlay, { once: true, passive: true });
+  }
+
   // ── Countdown timer ──────────────────────────────────────────
   var TARGET = new Date('2026-08-14T20:00:00');
 
